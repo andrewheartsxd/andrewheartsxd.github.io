@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InstaSwag - Your Swag Today!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="css/modules.css">
+        <link rel="stylesheet" type="text/css" href="css/state.css">
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
+    <body>
+        <main class="container">
+            <br>
+            <div id="title" class="fourteen columns">InstaSwag</div>
+            <input id="login-button" class="two columns" type="button" value="Log in">
+            <form class="login-inputs offset-by-twelve four columns">
+                <input id="login-username" type="text" placeholder="Username">
+                <input id="login-password" type="password" placeholder="Password">
+                <div id="log-in-feedback"></div>
+                <input type="button" id="signInButton" value="Let's go!">
+            </form>
+            <div class="space">&nbsp;</div>
+            <summary class="content-info offset-by-one seven columns">
+                <h1 class="welcome">Welcome to InstaSwag.</h1>
+                <p class="description">No longer have difficulty choosing what to wear, what matches with what, or simply choosing something new. Watch as your closet matches for you something new everyday and suits your style.</p>
+            </summary>
+            <div class="canvas eight columns">
+                    <form class="inputs">
+                        <input id="email" type="text" placeholder="Email">
+                        <input id="username" type="text" placeholder="Username">
+                        <input id="password" type="password" placeholder="Password">
+                        <div id="pleasefill"></div>
+                    </form>
+                <br>
+                <input type="button" id="signUpButton" class="signup" value="Sign up">
+            </div>
+        </main>
+        <br>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="final.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#login-button').click(function(){
+                    $('#login-username, #login-password, #signInButton').fadeIn("slow");
+                });
+            });
+
+            $('.inputs').keypress(function(e) {
+                if(e.which == 13) {
+                    jQuery(this).blur();
+                    jQuery('#signUpButton').focus().click();
+                }
+            });
+
+            $('.login-inputs').keypress(function(e) {
+                if(e.which == 13) {
+                    jQuery(this).blur();
+                    jQuery('#signInButton').focus().click();
+                }
+            });
+
+        </script>
+    </body>
+</html>

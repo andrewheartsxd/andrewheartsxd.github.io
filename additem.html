@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InstaSwag - Your Swag Today!</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="css/primer.css">
+        <link rel="stylesheet" type="text/css" href="css/additem.css">
+        <link rel="stylesheet" type="text/css" href="css/state.css">
+        <link rel="stylesheet" type="text/css" href="css/theme.css">
+        <link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans|Bree+Serif' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <main class="container">
+                <a href="#"><div id="title">InstaSwag<span>™</span></div></a>
+                <header class="sixteen columns">
+                    <div class="fb">
+                        <a href="#"><img id="fblike" src="pictures/fblike.png"></a>
+                    </div>
+                    <p id="fbnumber">150k+</p>
+                    <ul id="nav-top">
+                            <a href="about.html"><li>about</li></a>
+                            <a href="contact.html"><li>contact</li></a>
+                            <a href="index.html"><li id="confirm">sign out</li></a>
+                    </ul>
+                </header>
+                <nav id="nav-bottom" class="seven columns">
+                    <a href="additem.html"><li id="nav-1" class="two columns">add item</li></a>
+                    <a href="closet.html"><li id="nav-2" class="two columns">closet</li></a>
+                    <a href="matchup.html"><li id="nav-3" class="two columns">match up!</li></a>
+                </nav>
+                <div class="dropbox offset-by-four seven columns">
+                    <div id="dropbox"></div>
+                    <div id="state"></div>
+                </div>
+                <div class="selection-box five columns">
+                    <select name="type" id="type-selector" class="selection-type">
+                        <option value="type">--type--</option>
+                        <option id="tops" value="top">tops</option>
+                        <option id="bottoms" value="bottom">bottoms</option>
+                    </select>
+                    <select name="color" id="color-selector" class="selection-color">
+                        <option value="color">--color--</option>
+                        <option id="black" value="black">black</option>
+                        <option id="white" value="white">white</option>
+                        <option id="grey" value="grey">grey</option>
+                        <option id="blue" value="blue">blue</option>
+                        <option id="yellow" value="yellow">yellow</option>
+                        <option id="red" value="red">red</option>
+                        <option id="green" value="green">green</option>
+                        <option id="beige" value="beige">beige</option>
+                    </select>
+                    <div class="clear"></div>
+                    <input type="button" id="add-item" value="add item">
+                </div>
+        </main>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="dragdrop.js"></script>
+        <script src="final.js"></script>
+    </body>
+</html>
